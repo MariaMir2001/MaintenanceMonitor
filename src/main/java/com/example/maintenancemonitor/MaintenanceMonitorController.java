@@ -10,7 +10,6 @@ public class MaintenanceMonitorController {
 
     @RequestMapping("/set")
 public String setMessage(@RequestParam String input){
-
         return input;
 }
 
