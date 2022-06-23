@@ -7,21 +7,21 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class MaintenanceMonitorController {
-String input;
+   MaintenanceMonitor a=new MaintenanceMonitor();
+
     @RequestMapping("/set")
-public String setMessage(@RequestParam String input){
-        return this.input=input;
-}
+    public String setMessage(@RequestParam String input) {
+        return a.setMessage(input);
+    }
 
-@RequestMapping("/getSet")
-public String getSetMessage(){
-        return setMessage(input);
-}
+    @RequestMapping("/deliver")
+    public String deliverMessage() {
+        return a.deliverMessage();
+    }
 
-@RequestMapping("/reset")
-public String resetMessage(){
-input=null;
-return input;
-}
+    @RequestMapping("/reset")
+    public String resetMessage() {
+        return a.resetMessage();
+    }
 
 }
